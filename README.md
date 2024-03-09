@@ -1,7 +1,7 @@
 ## Overview : 
 
 
-BioVista is a dynamic and interactive blogging platform designed specifically for the biomedical engineering community. BioVista isn't just your average blogging platform; it's an immersive haven where curiosity finds its answers. Ever encountered a question that left you stumped? Fear not! In our bustling community, the quest for knowledge never ends. If an answer eludes you, simply pose your question, and watch as fellow enthusiasts eagerly rally to your aid, ensuring no query goes unanswered. ![alt text](https://www.flaticon.com/free-icon/enzyme_3214063?term=biotechnology&page=1&position=16&origin=search&related_id=3214063)
+BioVista is a dynamic and interactive blogging platform designed specifically for the biomedical engineering community. BioVista isn't just your average blogging platform; it's an immersive haven where curiosity finds its answers. Ever encountered a question that left you stumped? Fear not! In our bustling community, the quest for knowledge never ends. If an answer eludes you, simply pose your question, and watch as fellow enthusiasts eagerly rally to your aid, ensuring no query goes unanswered. <b>[alt text](https://www.flaticon.com/free-icon/enzyme_3214063?term=biotechnology&page=1&position=16&origin=search&related_id=3214063)</b>
 
 ## Purpose
 
