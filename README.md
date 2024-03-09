@@ -38,7 +38,7 @@ Let's make waves in the biomedical community, one post at a time!
 <h4 align="center">AITMBAREK oumaima</h4>
 
 
-Have questions, suggestions, or feedback? I'd love to hear from you! Feel free to reach out to me here
+<p align="center">Have questions, suggestions, or feedback? I'd love to hear from you! Feel free to reach out to me here</P>
 
 <p align="center">
   <a href="https://omaima.aitmbarek@gmail.com"><img src="https://skillicons.dev/icons?i=gmail&theme=light" alt="Gmail">
