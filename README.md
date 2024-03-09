@@ -38,9 +38,9 @@ Let's make waves in the biomedical community, one post at a time!
 
 Have questions, suggestions, or feedback? I'd love to hear from you! Feel free to reach out to me via :
 
-<a href="https://google.com">
-  <img src="https://skillicons.dev/icons?i=gmail&theme=light" alt="Gmail">
-</a> [omaima.aitmbarek@gmail.com](mailto:omaima.aitmbarek@gmail.com)
+<a href="https://omaima.aitmbarek@gmail.com"><img src="https://skillicons.dev/icons?i=gmail&theme=light" alt="Gmail">
+</a> 
+
 [![Linkedin](https://skillicons.dev/icons?i=linkedin&theme=light)](https://google.com)
  <b>[AITMBAREK oumaima](www.linkedin.com/in/aitmbarek-oumaima)</b><br/>
 
