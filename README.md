@@ -1,4 +1,5 @@
-## Overview
+## Overview <img style="width:4rem;" src="https://pics.freeicons.io/uploads/icons/png/20858493021639586800-64.png" />
+
 
 BioVista is a dynamic and interactive blogging platform designed specifically for the biomedical engineering community. BioVista isn't just your average blogging platform; it's an immersive haven where curiosity finds its answers. Ever encountered a question that left you stumped? Fear not! In our bustling community, the quest for knowledge never ends. If an answer eludes you, simply pose your question, and watch as fellow enthusiasts eagerly rally to your aid, ensuring no query goes unanswered.
 
@@ -15,7 +16,7 @@ Discover: Explore a treasure trove of knowledge with our tagging and categorizat
 Connect: Build your network and collaborate with like-minded individuals.
 Community Support: Can't find the answer to your question? Post it on BioVista, and someone from the community will respond.
 
-## Tech Stack
+## Technologies Used
 
 Crafted with passion and expertise, leveraging cutting-edge technologies to provide a seamless experience for our users.
 + Frontend: HTML, CSS, JavaScript
@@ -23,13 +24,12 @@ Crafted with passion and expertise, leveraging cutting-edge technologies to prov
 + Database: MySQL
 + API: JavaScript
 
-## Join Us!
+## Roadmap and Future Enhancements
 
-Come aboard and let's revolutionize biomedical engineering together.
-
-#Get Started
-
-Clone the repo, fire up your creativity, and let your ideas flow!
++ Specialized Training Modules
++ Enhanced Collaboration Tools
++ Advanced Search Functionality
++ Scalability Improvements
 
 ## Happy Blogging!
 
