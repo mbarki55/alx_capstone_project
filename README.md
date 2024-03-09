@@ -23,6 +23,12 @@ Crafted with passion and expertise, leveraging cutting-edge technologies to prov
 + Database: MySQL
 + API: JavaScript
 
+## Screenshots <a href="https://imgbb.com/"><img style="width:2rem;" src="https://i.ibb.co/sJLwZWP/20858493021639586800-64.png" alt="20858493021639586800-64" border="0"></a>
+
+Take a glimpse into our blogging app with these screenshots:
+![Screenshot 1](/images/flowchart.png)
+
+
 ## Roadmap and Future Enhancements <a href="https://imgbb.com/"><img style="width:2rem;" src="https://i.ibb.co/sJLwZWP/20858493021639586800-64.png" alt="20858493021639586800-64" border="0"></a>
 
 + Specialized Training Modules
