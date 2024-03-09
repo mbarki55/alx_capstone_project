@@ -1,7 +1,7 @@
 ## Overview : 
 
 
-BioVista is a dynamic and interactive blogging platform designed specifically for the biomedical engineering community. BioVista isn't just your average blogging platform; it's an immersive haven where curiosity finds its answers. Ever encountered a question that left you stumped? Fear not! In our bustling community, the quest for knowledge never ends. If an answer eludes you, simply pose your question, and watch as fellow enthusiasts eagerly rally to your aid, ensuring no query goes unanswered. <b>[alt text](https://www.flaticon.com/free-icon/enzyme_3214063?term=biotechnology&page=1&position=16&origin=search&related_id=3214063)</b>
+BioVista is a dynamic and interactive blogging platform designed specifically for the biomedical engineering community. BioVista isn't just your average blogging platform; it's an immersive haven where curiosity finds its answers. Ever encountered a question that left you stumped? Fear not! In our bustling community, the quest for knowledge never ends. If an answer eludes you, simply pose your question, and watch as fellow enthusiasts eagerly rally to your aid, ensuring no query goes unanswered. ![alt text](https://www.flaticon.com/free-icon/enzyme_3214063?term=biotechnology&page=1&position=16&origin=search&related_id=3214063)
 
 ## Purpose
 
@@ -43,4 +43,9 @@ Linkedin : <b>[AITMBAREK oumaima](www.linkedin.com/in/aitmbarek-oumaima)</b><br/
 
 
 I'm here to assist you and make your experience with BioVista as enjoyable and enriching as possible!
+[![Gmail](https://skillicons.dev/icons?i=gmail&theme=light)](https://google.com)
+
+[![Linkedin](https://skillicons.dev/icons?i=linkedin&theme=light)](https://google.com)
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/sJLwZWP/20858493021639586800-64.png" alt="20858493021639586800-64" border="0"></a>
 
