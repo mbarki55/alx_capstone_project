@@ -40,7 +40,7 @@ Let's make waves in the biomedical community, one post at a time!
 Have questions, suggestions, or feedback? I'd love to hear from you! Feel free to reach out to me via :
 
 Email: omaima.aitmbarek@gmail.com
-Linkedin : [AITMBAREK oumaima] (www.linkedin.com/in/aitmbarek-oumaima)
+Linkedin : <b>[AITMBAREK oumaima](www.linkedin.com/in/aitmbarek-oumaima)<b\>
 
 
 I'm here to assist you and make your experience with BioVista as enjoyable and enriching as possible!
