@@ -41,7 +41,7 @@ Have questions, suggestions, or feedback? I'd love to hear from you! Feel free t
 <a href="https://omaima.aitmbarek@gmail.com"><img src="https://skillicons.dev/icons?i=gmail&theme=light" alt="Gmail">
 </a> 
 
-<b><a href="https://www.linkedin.com/in/aitmbarek-oumaima">AITMBAREK oumaima<img src="https://skillicons.dev/icons?i=linkedin&theme=light" alt="linkedin"></a></b>
+<b><a href="https://www.linkedin.com/in/aitmbarek-oumaima"><img src="https://skillicons.dev/icons?i=linkedin&theme=light" alt="linkedin"></a></b>
 
 
 
