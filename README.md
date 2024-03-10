@@ -2,7 +2,7 @@
 <img src="./biovista_banner.png" alt="Readme_banner"/>
 </p>
 <br>
-<h1 align="center">ALX Python Projects</h1>
+<h1 align="center">Capstone Project</h1>
 <br>
 
 ## Overview <a href="https://imgbb.com/"><img style="width:2rem;" src="https://i.ibb.co/sJLwZWP/20858493021639586800-64.png" alt="20858493021639586800-64" border="0"></a>
