@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./images/banner.png" alt="Readme_banner"/>
+<img src="./capstone_web_app/capstone_frontend/images/banner.png" alt="Readme_banner"/>
 </p>
 <br>
 <h1 align="center">Capstone Project</h1>
@@ -33,7 +33,7 @@ Crafted with passion and expertise, leveraging cutting-edge technologies to prov
 ## Screenshots <a href="https://imgbb.com/"><img style="width:2rem;" src="https://i.ibb.co/sJLwZWP/20858493021639586800-64.png" alt="20858493021639586800-64" border="0"></a>
 
 Take a glimpse into our blogging app with these screenshots:
-![Screenshot 1](/images/flowchart.png)
+![Screenshot 1](/capstone_web_app/capstone_frontend/images/flowchart.png)
 
 
 ## Roadmap and Future Enhancements <a href="https://imgbb.com/"><img style="width:2rem;" src="https://i.ibb.co/sJLwZWP/20858493021639586800-64.png" alt="20858493021639586800-64" border="0"></a>
