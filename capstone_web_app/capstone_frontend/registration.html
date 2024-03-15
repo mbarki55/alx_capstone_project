@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Sign Up</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Happy blogging!</h1>
+        <div class="form-container">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <label >Username:</label>
+                <input type="text" placeholder="Enter username or email" required><br><br>
+                <label >Password:</label>
+                <input type="password" placeholder="Enter password " required><br><br>
+                <button type="submit">Login</button>
+                <p id="error" style="color: red;"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="container"> 
+        <h1>Start your blogging journey here and let your creativity soar</h1>
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <form action="/signup" method="POST">
+                <label >Username:</label>
+                <input type="text" placeholder="Enter username" required><br><br>
+                <label >Email:</label>
+                <input type="email" placeholder="Enter email address" required><br><br>
+                <label >Password:</label>
+                <input type="password" placeholder="Enter password" required><br><br>
+                <label >Confirm password:</label>
+                <input type="confirm-password" placeholder="Confirm password" required><br><br>
+                <label >Birth date:</label>
+                <input type="date" placeholder="Enter birth date" required><br><br>
+                <div class="gender-box">
+                    <h3>Gender:</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <label for="check-male">Male</label>
+                            <input type="radio" id="check-male" name="gender"/>
+                        </div>
+                        <div class="gender"> 
+                            <label for="check-female">Female</label>
+                            <input type="radio" id="check-female" name="gender"/>
+                        </div>
+                        <div class="gender">
+                            <label for="check-other">Prefer not to say</label>
+                            <input type="radio" id="check-other" name="gender"/>
+                        </div>
+                    </div>
+                </div>
+            <div class="select-container"> 
+                <h3>Specialisation:</h3> 
+                <select class="select-box">
+                    <option value="select">Select an option</option>
+                    <option value="Biopharmaceuticals">Biopharmaceuticals</option>
+                    <option value="Bioinformatics">Bioinformatics</option>
+                    <option value="Molecular Diagnostics">Molecular Diagnostics</option>
+                    <option value="Stem Cell Research">Stem Cell Research</option>
+                    <option value="Medical Imaging">Medical Imaging</option>
+                    <option value="Drug Discovery and Development">Drug Discovery and Development</option>
+                    <option value="Biomedical Engineering">Biomedical Engineering</option>
+                    <option value="Immunology">Immunology</option>
+                    <option value="Bioethics">Bioethics</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+                <button type="submit">Sign Up</button>
+                <p id="error" style="color: red;"></p>
+            </form>
+           
+        </div>
+    </div>
+   
+</body>
+</html>
