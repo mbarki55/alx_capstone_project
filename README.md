@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./images/biovista_banner.png" alt="Readme_banner"/>
+<img src="./images/banner.png" alt="Readme_banner"/>
 </p>
 <br>
 <h1 align="center">Capstone Project</h1>
