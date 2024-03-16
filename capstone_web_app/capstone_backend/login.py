@@ -34,7 +34,7 @@ def login():
             return render_template('app.html', message = message)
         else:
             message = 'Invalid email or password! Please try again'
-    return render_template(login.html, message= message)
+    return render_template('login.html', message= message)
 
 
 
