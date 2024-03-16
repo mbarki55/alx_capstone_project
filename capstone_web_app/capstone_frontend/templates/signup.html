@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./capstone_web_app/capstone_backend/registration.py"></script>
+    <script defer src="../capstone_backend/signup.py"></script>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./capstone_web_app/capstone_frontend/css/signup.css">
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
 
@@ -13,52 +13,20 @@
         <h1>Start your blogging journey here and let your creativity soar</h1>
         <div class="form-container">
             <h2>Sign Up</h2>
-            <form action="/signup" method="POST">
+            <form action="{{url_for('signup')}}" method="POST">
+                {% if message is defined and mesaage %}
+                    <div classe= "alert alert-warning">{{message}}</div>
+                {% endif %}
                 <label >Username:</label>
                 <input type="text" placeholder="Enter username" required><br><br>
                 <label >Email:</label>
                 <input type="email" placeholder="Enter email address" required><br><br>
                 <label >Password:</label>
                 <input type="password" placeholder="Enter password" required><br><br>
-                <label >Confirm password:</label>
-                <input type="confirm-password" placeholder="Confirm password" required><br><br>
-                <label >Birth date:</label>
-                <input type="date" placeholder="Enter birth date" required><br><br>
-                <div class="gender-box">
-                    <h3>Gender:</h3>
-                    <div class="gender-option">
-                        <div class="gender">
-                            <label for="check-male">Male</label>
-                            <input type="radio" id="check-male" name="gender"/>
-                        </div>
-                        <div class="gender"> 
-                            <label for="check-female">Female</label>
-                            <input type="radio" id="check-female" name="gender"/>
-                        </div>
-                        <div class="gender">
-                            <label for="check-other">Prefer not to say</label>
-                            <input type="radio" id="check-other" name="gender"/>
-                        </div>
-                    </div>
-                </div>
-            <div class="select-container"> 
-                <h3>Specialisation:</h3> 
-                <select class="select-box">
-                    <option value="select">Select an option</option>
-                    <option value="Biopharmaceuticals">Biopharmaceuticals</option>
-                    <option value="Bioinformatics">Bioinformatics</option>
-                    <option value="Molecular Diagnostics">Molecular Diagnostics</option>
-                    <option value="Stem Cell Research">Stem Cell Research</option>
-                    <option value="Medical Imaging">Medical Imaging</option>
-                    <option value="Drug Discovery and Development">Drug Discovery and Development</option>
-                    <option value="Biomedical Engineering">Biomedical Engineering</option>
-                    <option value="Immunology">Immunology</option>
-                    <option value="Bioethics">Bioethics</option>
-                    <option value="others">Others</option>
-                </select>
-            </div>
+                <label >Confirm password:</label>               
                 <button type="submit">Sign Up</button>
                 <p id="error" style="color: red;"></p>
+                <p classe= "bottom" >Already have an account? <a class= "bottom" href="{{url_for('login')}}">login here</a></p>
             </form>
            
         </div>
