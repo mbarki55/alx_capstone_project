@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center; 
+    align-items: center;
+    justify-content: center; 
+    align-items: center;
+    
+  }
+  
+  .form-container {
+    background-color:rgba(255, 255, 255, 0.7);
+    
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+   form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+
+  }
+  
+  input {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+
+  .form-container :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    flex-wrap: wrap;
+  }
+  .form-container .gender{
+    column-gap: 50px;
+  }
+  .form :where( .gender input, .gender label) {
+    cursor: pointer;
+  }
+  .form-container .gender-box{
+    margin-top: 5px;
+  }
+
+  .gender-box h3 {
+    color: #242424;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px ;
+  }
+  .gender input {
+    accent-color: #5ce1e6  ;
+  }
+  .gender label {
+    color: #707070;
+  }
+  .form-container .select-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-width: 250px;
+    height: 55px;
+    margin-top: 25px;
+  }
+  
+  .select-box{
+    padding: 0 30px 0 10px;
+    width: 50%;
+    height: 37px;
+    font-size: 15px;
+  }
+
+  .select-container h3 {
+    color: #242424;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px ;
+  }
+  button {
+   
+      background-color: #1848a0;
+      color:  #fafafa;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30%;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      margin: 8px;
+  }
+
+  button:hover {
+    background-color: #5ce1e6;
+  }
+
+  #error {
+    color: red;
+    margin-top: 10px;
+}
+  
+/*---Responsive---*/
+@media screen and (max-width: 500px) {
+  .form-container {
+    flex-wrap: wrap;
+  }
+  .form-container :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
