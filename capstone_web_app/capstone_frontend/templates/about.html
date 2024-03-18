@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/icon" href="{{ url_for('static', filename='media/icon_biovista_remove.png') }}">
-    <link rel='stylesheet' href="{{ url_for('static', filename='home.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='about.css') }}">
     <title>Biovista</title>
 </head>
 <body>
@@ -22,8 +22,8 @@
                 </label>
                 <div class="nav-container">
                     <ul class="nav-tabs">
-                        <li class="nav-tab"><a href="{{url_for('about')}}" class="nav-link">About us</a></li>
-                        <li class="nav-tab"><a href="{{url_for('login')}}" class="nav-link"><button>Login</button></a></li>
+                        <li class="nav-tab"><a href="{{url_for('home')}}" class="nav-link">Home</a></li>
+                        <li class="nav-tab"><a href="{{url_for('login')}}" class="nav-link">Sign Up</a></li>
                     </ul>
                 </div>
             </nav>
@@ -34,31 +34,22 @@
         <!--"Title section"-->
       <section class="title-section">
         <div class="title-container">
-            <h1 class="title">Explore the Biomedical World with BioVista</h1>
-            <h2 class="subtitle">The premier professional network for the biomedical engineering community</h2>
-            <a href="{{url_for('register')}}"><button>Join us</button></a>
-            <p>
-                Connect with industry experts, discover new opportunities, and stay at the forefront of innovation. 
-                Register now and unlock a world of possibilities in biomedical engineering!
-            </p>
-
+            <h3 class="title">About us</h3>
         </div>
     </section>
 
      <!--"About us" section-->
-     <!-- About us section -->
-<section class="about-us-section">
-    <div class="about-us-container">
-        <div class="about-us-text">
-            <h1>Welcome to BioVista</h1>
-            <p>Your premier destination for all things biomedical engineering. Our platform is more than just a space for blogging it's a vibrant community where professionals, enthusiasts, and learners come together to explore the latest advancements, share insights, and collaborate on groundbreaking projects. Whether you're a seasoned expert or just starting your journey in the field, BioVista offers a supportive environment where innovation thrives and knowledge knows no bounds. Join us as we embark on a quest to push the boundaries of biomedical engineering and shape the future of healthcare.</p>
-        </div>
-        <div class="image-text-content">
-            <img src="../static/media/image_home.jpg" alt="Team photo" class="about-us-image">
-        </div>
-    </div>
-</section>
-
+     <section class="about-us-section">
+        <div class="about-us-continer">
+          <h4>Welcome to BioVista</h4>
+          <p>
+            Your premier destination for all things biomedical engineering.
+            Our platform is more than just a space for blogging it's a vibrant community where professionals, enthusiasts, 
+            and learners come together to explore the latest advancements, share insights, and collaborate
+            on groundbreaking projects. Whether you're a seasoned expert or just starting your journey in the field, 
+            BioVista offers a supportive environment where innovation thrives and knowledge knows no bounds.
+            Join us as we embark on a quest to push the boundaries of biomedical engineering and shape the future of healthcare.
+          </p>
     </main>
 
     <footer>
