@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./capstone_web_app/capstone_frontend/images/banner.png" alt="Readme_banner"/>
+<img src="./capstone_web_app/static/media/banner.png" alt="Readme_banner"/>
 </p>
 <br>
 <h1 align="center">Capstone Project</h1>
