@@ -1,11 +1,114 @@
-/* config.css */
-
+:root {
+  --htmlFontSize: 100%;
+  --bodyBackgroundColor: #2c3338;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+:root {
+  --formGap: 0.875rem;
+}
+:root {
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #eee;
+  --loginInputBackgroundColor: #3b4148;
+  --loginInputHoverBackgroundColor: #434a52;
+  --loginLabelBackgroundColor: #363b41;
+  --loginSubmitBackgroundColor: #4c81ea;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #648fe5;
+  --anchorColor: #eee;
+}
 :root {
   --baseColor: #606468;
 }
 
-/* helpers/align.css */
+html{
+  background-image:url(../static/media/backgroung.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: var(--htmlFontSize);
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding:0;
+  margin: 0;
+  color: var(--bodyColor);
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  line-height: var(--bodyLineHeight);}
 
+/************ Header ************/
+header {
+background-color: rgb(255, 255, 255);
+max-width: 100%;
+padding: 0.5% 5%;
+z-index: 100;
+}
+header .nav-wrapper{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* - Header Logo - */
+.logo {
+width: 10rem;
+}
+/* - Navbar Menu - */
+nav .nav-container .nav-tabs {
+float: right;
+list-style: none;
+}
+.nav-container ul li {
+display: inline;
+margin: 0 1.5rem;
+}
+.nav-tabs .nav-tab:nth-child(1) a {
+text-decoration: none;
+color:rgb(20, 61, 118);
+font-weight: bold;
+font-size: medium;
+}
+.nav-tabs .nav-tab a:hover{
+color: #00a4d2;
+}
+.nav-tab a:visited {
+  color: inherit;
+}
+
+/*********--main--*********/
+main  {
+  margin: 6rem;
+  margin-left: 45px;
+  margin-right: 45;
+}
+/*---title section---*/
+main .title-section .title-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
+margin-bottom: 4rem;
+}
+.title-container .title {
+color: #ffffff;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+margin: auto;
+padding-bottom: 2rem;
+}
+
+/****---Login section---*****/
+
+/* helpers */
 .align {
   display: grid;
   place-items: center;
@@ -31,84 +134,26 @@
 }
 
 /* helpers/icon.css */
-
 :root {
-  --iconFill: var(--baseColor);
+  --iconFill: #00a4d2;
 }
-
 .icons {
   display: none;
 }
-
 .icon {
   block-size: 1em;
   display: inline-block;
   fill: var(--iconFill);
   inline-size: 1em;
   vertical-align: middle;
+  color: #00a4d2;
 }
-
-/* layout/base.css */
-
-:root {
-  --htmlFontSize: 100%;
-
-  --bodyBackgroundColor: #2c3338;
-  --bodyColor: var(--baseColor);
-  --bodyFontFamily: "Open Sans";
-  --bodyFontFamilyFallback: sans-serif;
-  --bodyFontSize: 0.875rem;
-  --bodyFontWeight: 400;
-  --bodyLineHeight: 1.5;
-}
-
-* {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: var(--htmlFontSize);
-}
-
-body {
-  background-color: var(--bodyBackgroundColor);
-  color: var(--bodyColor);
-  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
-  font-size: var(--bodyFontSize);
-  font-weight: var(--bodyFontWeight);
-  line-height: var(--bodyLineHeight);
-  margin: 0;
-  min-block-size: 100vh;
-}
-
-/* modules/anchor.css */
-
-:root {
-  --anchorColor: #eee;
-}
-
-a {
-  color: var(--anchorColor);
-  outline: 0;
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  text-decoration: underline;
-}
-
-/* modules/form.css */
-
-:root {
-  --formGap: 0.875rem;
-}
+/* ---- inputs / form -----  */
 
 input {
   background-image: none;
   border: 0;
-  color: inherit;
+  color: grey;
   font: inherit;
   margin: 0;
   outline: 0;
@@ -139,22 +184,7 @@ input[type="submit"] {
   flex: 1;
 }
 
-/* modules/login.css */
-
-:root {
-  --loginBorderRadus: 0.25rem;
-  --loginColor: #eee;
-
-  --loginInputBackgroundColor: #3b4148;
-  --loginInputHoverBackgroundColor: #434a52;
-
-  --loginLabelBackgroundColor: #363b41;
-
-  --loginSubmitBackgroundColor: #4c81ea;
-  --loginSubmitColor: #eee;
-  --loginSubmitHoverBackgroundColor: #4c81ea;
-}
-
+/* ---- modules/Login ---- */
 .login {
   color: var(--loginColor);
 }
@@ -168,7 +198,7 @@ input[type="submit"] {
 }
 
 .login label {
-  background-color: var(--loginLabelBackgroundColor);
+  background-color: white;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   padding-inline: 1.25rem;
@@ -176,7 +206,7 @@ input[type="submit"] {
 
 .login input[type="password"],
 .login input[type="text"] {
-  background-color: var(--loginInputBackgroundColor);
+  background-color: white;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -185,7 +215,7 @@ input[type="submit"] {
 .login input[type="password"]:hover,
 .login input[type="text"]:focus,
 .login input[type="text"]:hover {
-  background-color: var(--loginInputHoverBackgroundColor);
+  background-color: whitesmoke;
 }
 
 .login input[type="submit"] {
@@ -200,7 +230,7 @@ input[type="submit"] {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
 
-/* modules/text.css */
+/* --- modules/text --- */
 
 p {
   margin-block: 1.5rem;
@@ -208,4 +238,56 @@ p {
 
 .text--center {
   text-align: center;
+  color: #74d9f7;
+}
+
+.alert {
+  text-align: center;
+  color: orange;
+  font-size: 19px;
+  padding-bottom: 16px;
+}
+
+a {
+  color: var(--anchorColor);
+  outline: 0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========= FOOTER ========= */
+.Footer-Section {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.Footer-Section .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 10% 0 10%;
+  align-items: center;
+}
+.footer-container .logo-footer {
+  width: 9rem;
+}
+.footer-container .icons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+.icons .Social-icon img {
+  height: 1.5rem;
+}
+.Social-icon .icons img:hover {
+  cursor: pointer;
+}
+.Footer-Section p {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
 }

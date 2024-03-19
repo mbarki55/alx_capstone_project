@@ -1,6 +1,6 @@
 
 body {
-  background-image:url(../static/media/backgroung.jpg);
+  background-image:url('media/backgroung.jpg');
   background-position: center;
   background-size: cover;
   background-size: 100%vh;

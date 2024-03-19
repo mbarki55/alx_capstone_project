@@ -3,11 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
+    <link rel="icon" type="image/icon" href="{{ url_for('static', filename='media/icon_biovista_remove.png') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='style_dashboard.css') }}">
+    <title>Dashboard : {{ username }}</title>
 </head>
 <body>
-    <h1>Welcome to Your Dashboard, {{ username }}</h1>
-    <p>This is the dashboard page. You can add your content here.</p>
-    <a href="/logout">Logout</a>
+  <!-- Navbar --
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo-container">
+                <img class="logo" src="{{ url_for('static', filename='media/logo-removebg-preview.png') }}" alt="Logo">
+            </div>
+            <nav>
+                <div class="nav-container">
+                    <ul class="nav-tabs">
+                        <li class="nav-tab"><a>{{ username }}</a></li>          
+                        <li class="nav-tab"><a href="/logout" class="nav-link"><button>Logout <svg class="icon">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg></button></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+            <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
+              <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
+            </symbol>
+        </svg>
+    </header>--->
+    <!-- End of navbar -->
+    
+    <main>
+        
+        <!--<form >
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" required></textarea><br>
+            <input type="submit" value="Create Post">
+        </form>-->
+        <form action="{{ url_for('create_post') }}" method="POST">
+            <label for="title">Happy blogging!</label><br>
+            <div classe="post_box">
+            <input type="text" id="title" name="title" placeholder="Title" required>
+            <textarea id="content" name="content" placeholder="Write a post..."  ></textarea><br>
+                <button class="button-success">Post</button>
+                <a class="cancel" href="#">cancel</a>
+            </div>
+    
+            
+            
+        <!-- Attached Files -->
+        <ul class="attached-files">
+            <div class="clearfix"></div>
+        </ul>
+    
+        </form>
+        <!------------------------------------------>
+        
+        <ul  class="posts-list">
+            {% for post in posts %}
+                <li>
+                    <div>
+                        {{ username }}<h4></h4>
+                    </div>
+                    <p>{{ post[2] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-------------------- test ------------------->
+      
+        
+
+    </main>
+
+    <footer>
+      <div class="Footer-Section">
+          <div class="footer-container">
+            <div class="logo-footer-container">
+              <img class= "logo-footer" src="{{ url_for('static', filename='media/logo-removebg-preview.png') }}" alt="Logo image">
+            </div>
+            <div class="icons">
+                  <a  class="Social-icon Facebook_icon" href="#"><img src="{{ url_for('static', filename='media/facebook_icon.png') }}" alt="Social_icon"/></a>
+                  <a class="Social-icon Twitter_icon" href="#"><img src="{{ url_for('static', filename='media/x_icon.png') }}" alt="Social_icon"/></a>
+                  <a class="Social-icon Instagram_icon" href="#"><img src="{{ url_for('static', filename='media/Instagram_icon.png') }}" alt="Social_icon"/></a>
+            </div>
+          </div>
+          <p>© Biovista 2024</p>
+      </div>
+    </footer>
+
 </body>
 </html>
+

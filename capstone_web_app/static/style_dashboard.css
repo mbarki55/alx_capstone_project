@@ -1,0 +1,189 @@
+html{
+  background-image:url(../static/media/backgroung.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding:0;
+  margin: 0;
+}
+/************ Header ************/
+header {
+background-color: rgb(255, 255, 255);
+max-width: 100%;
+padding: 0.5% 4%;
+z-index: 100;
+}
+header .nav-wrapper{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* - Header Logo - */
+.logo {
+width: 10rem;
+}
+/* - Navbar Menu - *
+nav .nav-container .nav-tabs {
+float: right;
+list-style: none;
+}
+.nav-container ul li {
+display: inline;
+margin: 0 1.5rem;
+}
+.nav-tabs .nav-tab:nth-child(1) a {
+text-decoration: none;
+color:rgb(20, 61, 118);
+font-weight: bold;
+font-size: medium;
+}
+.nav-tabs .nav-tab a:hover{
+color: #00a4d2;
+}
+.nav-tab a:visited {
+  color: inherit;
+}
+.nav-tabs .nav-tab a button {
+  background: #143d76;
+  color: white;
+  border-radius: 50px;
+  width: 80px;
+  height: 33px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-tabs .nav-tab a button:hover {
+  border: 2px solid #143d76;
+  color: #143d76;
+  background: none;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --iconFill: #ffffff;
+}
+
+.icons {
+  display: none;
+}
+
+.icon {
+  block-size: 1em;
+  display: inline-block;
+  fill: var(--iconFill);
+  inline-size: 0.8em;
+  vertical-align: middle;
+}
+
+.nav-tabs .nav-tab a:hover .icon {
+  fill: #143d76;
+}/
+
+/*********--main--*********/
+main  {
+  margin:0rem 20px 0rem 70px;
+  background-color: #ffffff;
+  text-align: center;
+  align-items: center;
+  padding: 200px;
+}
+/*---title section---*/
+main .title-section .title-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
+margin-bottom: 4rem;
+}
+.title-container .title {
+color: #ffffff;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+margin: auto;
+padding-bottom: 2rem;
+}
+
+/*** ------- post ------- ***
+main ul li {
+  border: 1px solid rgb(223, 220, 220);
+  border-radius: 18px;
+  list-style: none;
+  margin: 50px 8rem 50px 8rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+main ul li p {
+  padding-bottom: 30px;
+}
+main ul li h3 {
+  padding-bottom: 30px;
+
+}*/
+
+form .post_box {
+  display: flex;
+  flex-direction: row;
+
+ 
+}
+
+/* ========= FOOTER ========= */
+/* CSS for footer */
+.Footer-Section {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+/* Footer container */
+.Footer-Section .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 10% 0 10%;
+  align-items: center;
+}
+
+/* Logo in footer */
+.footer-container .logo-footer {
+  width: 9rem;
+}
+
+/* Social icons in footer */
+.footer-container .icons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+/* Style for social icons */
+.icons .Social-icon img {
+  height: 1.5rem;
+}
+
+/* Hover effect on social icons */
+.Social-icon .icons img:hover {
+  cursor: pointer;
+}
+
+/* Text in footer */
+.Footer-Section p {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------  */
+
