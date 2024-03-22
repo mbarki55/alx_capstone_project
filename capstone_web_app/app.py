@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
+import datetime
 import MySQLdb
 
 # create Flask app
@@ -13,17 +14,20 @@ app.config['MYSQL_PASSWORD'] = '<@Oumaima55>'
 app.config['MYSQL_DB'] = 'capstone_project'
 mysql = MySQL(app)
 
-# index
+# ------------- index --------------
+
 @app.route('/')
 def home():
     return render_template('home.html')
 
-# About us
+# ------------- About us ------------
+
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-# register
+# ------------ register --------------
+
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -56,7 +60,8 @@ def register():
 
     return render_template('register.html')
 
-# login
+# -------------- login -----------------
+
 @app.route('/login', methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -64,6 +69,7 @@ def login():
         password = request.form["password"]
 
         conn = MySQLdb.connect(host='localhost', user='root', password='<@Oumaima55>', database='capstone_project')
+
 
         if conn:
             cur = conn.cursor()
@@ -80,47 +86,75 @@ def login():
 
     return render_template('login.html')
 
-# Python code
+# -------------- Dashboard ---------------
 
 @app.route('/dashboard')
 def dashboard():
-    if 'username' in session:
-        conn = MySQLdb.connect(host='localhost', user='root', password='<@Oumaima55>', database='capstone_project')
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM posts WHERE user_id = %s", (session['user_id'],))
-        posts = cur.fetchall()
-        cur.close()
-        conn.close()
-        return render_template("dashboard.html", username=session['username'], posts=posts)
-    else:
-        return redirect(url_for('login'))
+    conn = MySQLdb.connect(host='localhost', user='root', password='<@Oumaima55>', database='capstone_project')
+    cur = conn.cursor()
+    cur.execute("SELECT p.id, p.content, p.user_id AS post_user_id, p.created_at AS post_created_at, c.comment_text, c.created_at AS comment_created_at, u.username AS comment_username, u_post.username AS post_username FROM posts p LEFT JOIN comments c ON p.id = c.post_id LEFT JOIN users u ON c.user_id = u.id LEFT JOIN users u_post ON p.user_id = u_post.id ORDER BY p.id DESC")
+    posts = cur.fetchall()
+    cur.close()
+    conn.close()
 
-# logout
+    # Structure posts data to make it more usable in the template
+    formatted_posts = {}
+    for post in posts:
+        post_id = post[0]
+        if post_id not in formatted_posts:
+            formatted_posts[post_id] = {
+                'content': post[1],
+                'user_id': post[2], 
+                'created_at': post[3].strftime('%H:%M %d-%m-%Y'),
+                'username_post': post[7],  # Use post_username obtained from the query
+                'comments': []
+            }
+        if post[4]:  # Check if comment exists
+            formatted_posts[post_id]['comments'].append({
+                'comment_text': post[4],
+                'comment_created_at': post[5].strftime('%H:%M %d-%m-%Y'),
+                'username': post[6]  # Username of the commenter
+            })
+
+    return render_template("dashboard.html", username=session.get('username'), posts=formatted_posts)
+
+
+# ------------------- logout ---------------
+
 @app.route('/logout')
 def logout():
     session.pop('username', None)
     return redirect(url_for('home'))
 
-# create post
-@app.route('/dashboard/create_post', methods=["GET", "POST"])
+import datetime
+
+# -------------------  create post ---------------
+
+@app.route('/dashboard/create_post', methods=["POST"])
 def create_post():
     if request.method == "POST":
-        title = request.form["title"]
         content = request.form["content"]
         user_id = session.get('user_id')
 
+        # Get the current date and time in the required format
+        created_at = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
         conn = MySQLdb.connect(host='localhost', user='root', password='<@Oumaima55>', database='capstone_project')
         cur = conn.cursor()
-        cur.execute("INSERT INTO posts (title, content, user_id) VALUES (%s, %s, %s)", (title, content, user_id))
+
+        # Use parameterized query to insert the post with created_at
+        cur.execute("INSERT INTO posts (content, user_id, created_at) VALUES (%s, %s, %s)", (content, user_id, created_at))
+
         conn.commit()
         cur.close()
         conn.close()
 
         return redirect(url_for('dashboard'))  # Redirect to home page after creating the post
 
-    return render_template('dashboard')
+    return redirect(url_for('dashboard'))  # If request method is not POST, redirect to home page
 
-# create comment
+# ------------------- create comment ---------------
+
 @app.route('/dashboard/create_comment', methods=["POST"])
 def create_comment():
     if request.method == "POST":
@@ -129,15 +163,16 @@ def create_comment():
         user_id = session.get('user_id')
 
         conn = MySQLdb.connect(host='localhost', user='root', password='<@Oumaima55>', database='capstone_project')
+
         cur = conn.cursor()
         cur.execute("INSERT INTO comments (post_id, user_id, comment_text) VALUES (%s, %s, %s)", (post_id, user_id, comment_text))
         conn.commit()
         cur.close()
         conn.close()
 
-        return redirect(url_for('dashboard'))  # Redirect to home page after creating the comment
+        return redirect(url_for('dashboard'))  # Redirect to dashboard after creating the comment
 
-    return redirect(url_for('dashboard'))  # If request method is not POST, redirect to home page
+    return redirect(url_for('dashboard'))  # If request method is not POST, redirect to dashboard
 
 
 # run the app

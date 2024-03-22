@@ -1,163 +1,351 @@
-/* =========== Google Fonts ============ */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
-
-/* =============== Globals ============== */
-* {
-  font-family: "Ubuntu", sans-serif;
+html {
+  background-image: url('media/backgroung.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-
-  min-height: 100vh;
-  overflow-x: hidden;
-  width: 100%;
-
+  padding:0;
+  margin: 0;
 }
 
-.container {
-  position: relative;
-  width: 100%;
+/************ Header ************/
+header {
+background-color: rgb(255, 255, 255);
+max-width: 100%;
+padding: 0.5% 5%;
+z-index: 100;
+}
+header .nav-wrapper{
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
-  
-
-/* =============== Navigation ================ */
-.navigation {
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    background:#143d76 ;
-    border-left: 10px solid #143d76 ;
-    transition: 0.5s;
-    overflow: hidden;
-  }
-
-  
-  .navigation ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  .navigation ul li {
-    position: relative;
-    width: 100%;
-    list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-  }
-  
-  .navigation ul li:hover,
-  .navigation ul li.hovered {
-    background-color: white;
-  }
-  
-  .navigation ul li:nth-child(1) {
-    margin-bottom: 40px;
-    pointer-events: none;
-  }
-  
-  .navigation ul li a {
-    position: relative;
-    display: block;
-    width: 100%;
-    display: flex;
-    text-decoration: none;
-    color: white;
-  }
-  .navigation ul li:hover a,
-  .navigation ul li.hovered a {
-    color: #00a4d2;
-  }
-  
-  .navigation ul li a .icon {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 75px;
-    text-align: center;
-  }
-  .navigation ul li a .icon ion-icon {
-    font-size: 1.75rem;
-  }
-  
-  .navigation ul li a .title {
-    position: relative;
-    display: block;
-    padding: 0 10px;
-    height: 60px;
-    line-height: 60px;
-    text-align: start;
-    white-space: nowrap;
-    
-  }
-
-   
-  
-
-  /* --------- curve outside ---------- */
-.navigation ul li:hover a::before,
-.navigation ul li.hovered a::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: 35px 35px 0 10px white;
-  pointer-events: none;
-}
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: 35px -35px 0 10px white;
-  pointer-events: none;
+/* - Header Logo - */
+.logo {
+width: 10rem;
 }
 
-/*--post form---*/
-
-main{
-  padding: 1rem 20rem;
-  width: 80%; 
-
+/* - Navbar Menu - */
+nav .nav-container .nav-tabs {
+float: right;
+list-style: none;
+}
+.nav-container ul li {
+display: inline;
+margin: 0 1.5rem;
 }
 
-.posts-list{
- 
-    list-style-type: none;
-    padding: 0;
-    
+.nav-tabs .nav-tab:nth-child(1) a {
+text-decoration: none;
+color:rgb(20, 61, 118);
+font-weight: bold;
+font-size: medium;
 }
 
-.post-item {
-  margin-bottom: 20px;
-  border: 1px solid #080101;
-  background-color: #c4c4c4;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+.nav-tabs .nav-username a {
+  cursor: pointer;
+}
+
+.nav-tabs .nav-tab a:hover{
+color: #00a4d2;
+}
+
+.nav-tab a:visited {
+  color: inherit;
+}
+
+.nav-tabs .nav-tab a button {
+  background: #143d76;
+  color: white;
+  border-radius: 50px;
+  width: 80px;
+  height: 33px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.nav-tabs .nav-tab a button:hover {
+  border: 2px solid #143d76;
+  color: #143d76;
+  background: none;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --iconFill: #ffffff;
+}
+
+.icons {
+  display: none;
+}
+
+.icon {
+  block-size: 1em;
+  display: inline-block;
+  fill: var(--iconFill);
+  inline-size: 0.8em;
+  vertical-align: middle;
+}
+
+.nav-tabs .nav-tab a:hover .icon {
+  fill: #143d76;
+}
+
+/*********--main--*********/
+main  {
+  max-width: 70%;
+  margin: 50px 140px 80px 140px;
+  background-color: #f3f5f7;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  padding: 10px 70px 70px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form, ul.posts-list {
+  width: 75%;
+}
+
+/* - Add Post - */
+form {
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  margin: 50px 8rem 20px 8rem;
+  padding: 10px 0 10px 0;  
+}
+
+form textarea {
+  border: none;
+  color: #444444;
+  width:  90%;
+  height: 60px;
+  margin-top: 13px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  cursor: text;
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: none;
+}
+
+form textarea:focus {
+  outline: none;
+  color: #444444;
+}
+
+form  input[type="submit"]{
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s   ease;
+  height: 30px;
+  width: 60px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.5),inset 0 -1px 0 rgba(255,255,255,.15) ;
+}
+
+/* - Post - */
+
+main .posts-list{
+  padding-left: 0px;
+}
+
+main ul .post-section {
+  background-color: #ffffff;
   border-radius: 5px;
+  list-style: none;
+  margin: 50px 0 120px 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.256);
 }
 
+main ul li .username {
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: #00a4d2;
+  font-size: 18px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-  
+ul li .username a i {
+  margin-right: 13px;
+  font-size: 32px;
+}
+
+ul li .post {
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 22px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #444444;
+}
+
+ul li .post_date {
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 10px;
+  color: gray;
+  font-size: 11px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* - Display Comment - */
+ul .comments {
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+ }
+
+ul .comments .username-reply{
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: #00a4d2;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul .comments .username-reply a i {
+  font-size: 23px;
+  margin-right: 5px;
+  margin-left: 25px;
+  padding-right: 8px;
+}
+
+ ul .comments li{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 13.5px;
+  text-align: left;
+  color: #444444;
+  height: 40px;
+  width: 75%;
+  margin: 8px 0 0 79px;
+  padding: 13px 0 0 9px;
+  border: none;
+  border-radius: 5px;
+  list-style: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.256);
+
+ }
+ ul li .comments p {
+  text-align: right;
+  padding-right: 10px;
+  margin-right: 40px;
+  color: gray;
+  font-size: 11px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+/* - Add comment section - */
+ul li .add_comment {
+ display: flex;
+ gap: 10px;
+ margin-top: 15px;
+ margin-right: 25px;
+ justify-content: end;
+ align-items: center;
+}
+ul li .add_comment form{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 40px 0 0;
+ }
+
+ul li .add_comment .username_comment {
+  color: #00a4d2;
+  font-size: 23px;
+  float: right;
+}
+ul li .add_comment form textarea{
+  margin: 10px;
+  height:  30px;
+  border: gray 1px solid;
+  padding: 8px;
+  border-radius: 8px;
+ }
+ ul li .add_comment form input[type="submit"] {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s   ease;
+  height: 33px;
+  width: 50px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.5),inset 0 -1px 0 rgba(255,255,255,.15) ;
+ }
 
 
+/* ========= FOOTER ========= */
+/* CSS for footer */
+.Footer-Section {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
 
+/* Footer container */
+.Footer-Section .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 10% 0 10%;
+  align-items: center;
+}
 
- 
-  
- 
+/* Logo in footer */
+.footer-container .logo-footer {
+  width: 9rem;
+}
+
+/* Social icons in footer */
+.footer-container .icons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+/* Style for social icons */
+.icons .Social-icon img {
+  height: 1.5rem;
+}
+
+/* Hover effect on social icons */
+.Social-icon .icons img:hover {
+  cursor: pointer;
+}
+
+/* Text in footer */
+.Footer-Section p {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------  */
 
